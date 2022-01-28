@@ -42,6 +42,7 @@ class SocketIoService {
 
   subscribeSummary() {
     socket.on(`${this.path}${PATH_SUFIXES.SUMMARY}`, data => {
+      console.log('llega data', data)
       if (data) {
         this.callback(data)
       }
@@ -50,6 +51,7 @@ class SocketIoService {
 
   subscribeDetails() {
     socket.on(`${this.path}${PATH_SUFIXES.DETAILS}`, data => {
+      console.log('llega data', data)
       if (data) {
         this.detailsCallback(data);
       }

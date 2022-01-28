@@ -23,7 +23,7 @@ function Container(props) {
   }
   // let params = useLocation().search;
   // const connTypeParam = new URLSearchParams(params).get('connectionType');
-  const [filterPath, setFilterPath] = useState('')
+  const [filterPath, setFilterPath] = useState(`IKEA-1234567-${InventoryPocUtils.getSubscriptionDate()}`)
   const [isSubscribed, setIsSubscribed] = useState(false);
   const [connectionType, setConnectionType] = useState('');
   const [summary, setSummary] = useState(DEFAULT_SUMMARY);
