@@ -106,19 +106,19 @@ function Container(props) {
 
     if (connectionType === 'firebase') {
       services[connectionType].init(filterPath, summaryCallback, summaryError, detailsCallback).then(() => {
-        services[connectionType].subscribeSummary();
-        // if (services[connectionType].subscribeDetails) {
-        //   services[connectionType].subscribeDetails();
-        // }
+        // services[connectionType].subscribeSummary();
+        if (services[connectionType].subscribeDetails) {
+          services[connectionType].subscribeDetails();
+        }
       });
     } else {
       // console.log('filterPath', filterPath);
       services[connectionType].init(filterPath, summaryCallback, summaryError, detailsCallback);
       // services[connectionType].init('IKEA-1234567-20220124', summaryCallback, summaryError, detailsCallback);
-      services[connectionType].subscribeSummary();
-      // if (services[connectionType].subscribeDetails) {
-      //   services[connectionType].subscribeDetails();
-      // }
+      // services[connectionType].subscribeSummary();
+      if (services[connectionType].subscribeDetails) {
+        services[connectionType].subscribeDetails();
+      }
     }
   }
 
