@@ -6,8 +6,8 @@ let sse
 class SeeService {
   constructor() {
     this.path = '';
-    this.callback;
-    this.errorCallback;
+    // this.callback;
+    // this.errorCallback;
   }
 
   init(path, callback, errorCallback, detailsCallback) {
