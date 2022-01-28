@@ -25,10 +25,10 @@ class CouchService {
       retry: true,
       continuous: true,
       auth: COUCHDB_DB_CONF.auth,
-      fetch: (url, opts) => {
-        opts.headers.set('X-Some-Special-Header', 'inventory-poc');
-        return PouchDB.fetch(url, opts);
-      }
+      // fetch: (url, opts) => {
+      //   opts.headers.set('X-Some-Special-Header', 'inventory-poc');
+      //   return PouchDB.fetch(url, opts);
+      // }
     };
     const urlDb = `${COUCHDB_DB_CONF.host}/inventory`
     const db = new PouchDB(urlDb, options)
@@ -60,10 +60,10 @@ class CouchService {
       retry: true,
       continuous: true,
       auth: COUCHDB_DB_CONF.auth,
-      fetch: (url, opts) => {
-        opts.headers.set('X-Some-Special-Header', 'inventory-poc');
-        return PouchDB.fetch(url, opts);
-      }
+      // fetch: (url, opts) => {
+      //   opts.headers.set('X-Some-Special-Header', 'inventory-poc');
+      //   return PouchDB.fetch(url, opts);
+      // }
     };
     const urlDb = `${COUCHDB_DB_CONF.host}/inventory`
     const db = new PouchDB(urlDb, options)

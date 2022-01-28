@@ -42,7 +42,7 @@ function Container(props) {
     //Use query params to test connections
     // if (connTypeParam) {
       setTimeout(() => {
-        handleSelectConnection({code: 'socketIo', manualRetry: false});
+        handleSelectConnection({code: 'couchDb', manualRetry: false});
         handleSubscribe()
       }, 500)
     // }
