@@ -1,5 +1,6 @@
 // import RestClient from "../../../commons/modules/restClient";
 
+import axios from 'axios';
 class InventoryPocUtils {
   constructor(props) {
     // super(props);
@@ -17,11 +18,16 @@ class InventoryPocUtils {
     return s;
   }
   getValidateToken(){
-    let config = {
-      method: "GET",
-      url: "/user/validateToken"
+    // this.updateInfo();
+    const apiUrl = 'https://httpbin.org/ip';
+    // const urlRequest = apiUrl;
+    const req = {
+
+      url: apiUrl,
+
     };
-    return this.execServices(config)
+    // return this.execServices(config)
+    return axios(req);
   }
 }
 

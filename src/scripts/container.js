@@ -33,16 +33,16 @@ function Container(props) {
   const [manualRetry, setManualRetry] = useState(false);
 
   useEffect(() => {
-    // InventoryPocUtils.getValidateToken().then(() => {
-    //   setOnline(true)
-    // }).catch(error => {
-    //   setOnline(false)
-    // })
-    setOnline(true)
+    InventoryPocUtils.getValidateToken().then(() => {
+      setOnline(true)
+    }).catch(error => {
+      setOnline(false)
+    })
+    // setOnline(true)
     //Use query params to test connections
     // if (connTypeParam) {
       setTimeout(() => {
-        handleSelectConnection({code: 'couchDb', manualRetry: false});
+        handleSelectConnection({code: 'couchDb', manualRetry: true});
         handleSubscribe()
       }, 500)
     // }
@@ -91,6 +91,7 @@ function Container(props) {
 
   const detailsCallback = (response) => {
     console.log(`[NotRealTime] [${connectionType}]`, JSON.stringify({...response, localTimestamp: Date.now()}));
+    // console.log('response')
   }
 
   const summaryError = (data) => {
