@@ -1,0 +1,113 @@
+.inventory-realtime-poc {
+  margin: 10px;
+  border-radius: 8px;
+  padding: 5px 20px;
+  //box-shadow: 1px 1px 10px #d1cece;
+  min-width: 1200px;
+  display: flex;
+
+  .sub-title {
+    font-size: 22px;
+  }
+
+  .connection-list-cont {
+    width: 20%;
+    box-shadow: 1px 1px 10px #d1cece;
+
+    .list-group {
+      .list-group-item {
+        cursor: pointer;
+      }
+
+      .active {
+        color: #FFFFFF !important;
+        background-color: #363d43;
+        border-color: #363d43;
+      }
+    }
+  }
+
+  .connection-detail-cont {
+    box-shadow: 1px 1px 10px #d1cece;
+    margin: 0 20px;
+    width: 80%;
+
+    .header-section {
+      display: flex;
+
+      .filters-section {
+        display: flex;
+        justify-content: space-around;
+        width: 75%;
+        padding-top: 20px;
+
+        .filter-select {
+          width: 200px;
+        }
+      }
+
+      .subs-btn-section {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 25%;
+        padding-top: 28px;
+
+        .btn {
+          width: 180px;
+        }
+      }
+    }
+
+    .details-cont {
+      padding: 20px;
+      font-size: 41px;
+
+      p {
+        margin-bottom: 0;
+        color: #fff !important;
+      }
+
+      .realtime-section {
+        width: 100%;
+        background-color: #212a2b;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        padding: 20px;
+        margin-bottom: 20px;
+
+      }
+
+      .calculated-section {
+        background-color: #363d43;
+        padding: 20px;
+
+        .row {
+          display: flex;
+          width: 100%;
+          justify-content: space-around;
+          padding: 20px;
+        }
+
+        .item {
+          .sub-title {
+            color: #c4c4c4 !important;
+          }
+
+          display: flex;
+          justify-content: center;
+          flex-direction: column;
+          align-items: center;
+        }
+
+        .footer{
+          display: flex;
+          justify-content: flex-end;
+        }
+      }
+    }
+  }
+}
+
