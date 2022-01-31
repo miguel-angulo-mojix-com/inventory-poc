@@ -42,7 +42,7 @@ function Container(props) {
     //Use query params to test connections
     // if (connTypeParam) {
       setTimeout(() => {
-        handleSelectConnection({code: 'sse', manualRetry: false});
+        handleSelectConnection({code: 'firebase', manualRetry: true});
         handleSubscribe()
       }, 500)
     // }
