@@ -42,7 +42,7 @@ function Container(props) {
     //Use query params to test connections
     // if (connTypeParam) {
       setTimeout(() => {
-        handleSelectConnection({code: 'firebase', manualRetry: true});
+        handleSelectConnection({code: 'sse', manualRetry: true});
         handleSubscribe()
       }, 500)
     // }
@@ -98,6 +98,7 @@ function Container(props) {
   const summaryError = (data) => {
     console.log('Error', data)
     unsubscribeConn();
+    setOnline(false)
   }
 
   const subscribeSummary = () => {
