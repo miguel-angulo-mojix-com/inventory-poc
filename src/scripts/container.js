@@ -90,6 +90,7 @@ function Container(props) {
   }
 
   const detailsCallback = (response) => {
+    console.log(Date.now()-response.timestamp);
     console.log(`[NotRealTime] [${connectionType}]`, JSON.stringify({...response, localTimestamp: Date.now()}));
     // console.log('response')
   }
