@@ -83,6 +83,9 @@ class CouchService {
         .on('change', (change) => {
           this.detailsCallback(change.doc.data);
         })
+        .on(
+          'error',this.errorCallback
+        );
     };
   }
 
