@@ -67,7 +67,7 @@ class CouchService {
     };
     const urlDb = `${COUCHDB_DB_CONF.host}/inventory`
     const db = new PouchDB(urlDb, options)
-
+    dbDetailsChanges = null;
     db.get(`${this.path}${PATH_SUFIXES.DETAILS}`).then(data => {
       this.detailsCallback(data.data);
       addLiveUpdateListener();
@@ -92,7 +92,10 @@ class CouchService {
 
   unSubscribe(callback) {
     // dbChanges.cancel();
-    dbDetailsChanges.cancel();
+    if(dbDetailsChanges){
+      dbDetailsChanges.cancel();
+    }
+
 
     callback();
     // window.removeEventListener('offline');
