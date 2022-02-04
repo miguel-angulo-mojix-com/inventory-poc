@@ -71,7 +71,8 @@ class CouchService {
     db.get(`${this.path}${PATH_SUFIXES.DETAILS}`).then(data => {
       this.detailsCallback(data.data);
       addLiveUpdateListener();
-    })
+    }).catch(this.errorCallback)
+
     const addLiveUpdateListener = () => {
       dbDetailsChanges = db.changes({
         live: true,
