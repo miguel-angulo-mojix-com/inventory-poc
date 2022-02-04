@@ -90,7 +90,7 @@ class CouchService {
   }
 
   unSubscribe(callback) {
-    dbChanges.cancel();
+    // dbChanges.cancel();
     dbDetailsChanges.cancel();
 
     callback();
